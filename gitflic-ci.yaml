@@ -1,0 +1,4 @@
+job 1:
+  script: echo "Привет всем"
+job 2:
+  script: echo "И хорошего настроения"
