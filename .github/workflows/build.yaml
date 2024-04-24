@@ -5,9 +5,12 @@ jobs:
     steps:
       - name: git 
         run: git clone https://gitverse.ru/sc/ilikosov/rune-master.git . && git checkout ${{ gitverse.ref_name }}
+      - name: 
+        run: apt update && apt upgrade && apt install -y curl && $ curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - && apt update && $ apt install -y nodejs
       - name: Install bun
-        run: npm i -g bun --yes  
-      - name: Install packages
-        run: bun install
-      - name: Run build
-        run: bun run build
+        run: node -v
+        # run: npm i -g bun --yes  
+      # - name: Install packages
+        # run: bun install
+      # - name: Run build
+        # run: bun run build
