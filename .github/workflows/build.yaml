@@ -1,0 +1,13 @@
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: git 
+        run: git clone https://gitverse.ru/sc/ilikosov/rune-master.git . && git checkout ${{ gitverse.ref_name }}
+      - name: Install bun
+        run: npm i -g bun --yes  
+      - name: Install packages
+        run: bun install
+      - name: Run build
+        run: bun run build
